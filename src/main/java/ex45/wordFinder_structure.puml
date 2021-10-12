@@ -1,0 +1,29 @@
+@startuml
+wordFinder--getOriginalString
+wordFinder--getNewString
+
+class wordFinder{
++String originalString,newString
++getOriginalString()
+getNewString()
++println()
+
+}
+interface getNewString{
++StringBuilder newString
++String[] stringArr
++split()
++contains()
++append()
++toString()
+}
+
+interface getOriginalString{
++readAllBytes()
++get()
+
+}
+
+
+
+@enduml

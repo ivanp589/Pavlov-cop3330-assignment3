@@ -1,0 +1,68 @@
+@startuml
+class WebsiteMaker{
++Scanner in
+-name()
+-author()
+-input()
++checkIftrue()
+-Folder()
+-files()
++createWebsite()
+}
+WebsiteMaker--createWebsite
+createWebsite<-createFolder
+createWebsite<-createhtmlFile
+createWebsite--folder
+
+createWebsite--files
+createWebsite--input
+createWebsite--name
+createWebsite--author
+createWebsite--checkIftrue
+interface createWebsite{
++String webfolder,Directory,created
++File file
++println()
++mkdir()
+-createhtmlFile()
++checkForError()
+-createFolder()
+}
+interface createFolder{
++String web,directory,websiteName
++File js
++mkdir()
+
+}
+
+interface createhtmlFile{
++String name,author,site
++File file
++println()
++FileWriter
++BufferedWriter
++write()
++close()
++printStackTrace()
+}
+interface folder{
++println()
+}
+interface files{
++println()
+}
+interface checkIftrue{
++String files
++equals()
+}
+interface input{
++nextline()
+}
+interface name{
++println()
+}
+interface author{
++println()
+}
+
+@enduml

@@ -1,0 +1,48 @@
+@startuml
+class nameSort{
++NumLines()
++storeString()
++stringSort()
+-create()
++checkForError()
++ String[]
++int
+}
+create--nameSort
+nameSort--checkForError
+nameSort--stringSort
+nameSort--storeString
+nameSort--NumLines
+
+interface create{
++int lines
++BufferedWriter
++fluch()
++close()
+}
+
+interface checkForError{
++boolean
+}
+interface stringSort{
++int lines,i,j
++String[] st1
++String blemp //temporary
++boolean
++compareToIgnoreCase()
+end interface
+}
+interface storeString{
++string[] st
++int i,lines
++readline()
+}
+interface NumLines{
++BufferedReader()
++BufferedReader
++FileReader()
++File
++readline()
+}
+
+@enduml

@@ -1,0 +1,72 @@
+@startuml
+class parseData{
++numlines()
++File file
++findLongest()
++storeString()
++stringSort()
++Person[] Perarr
++int i1,i2,Firstlength,Lastlength,Salarylength
+-formatPrint()
++String[] st1,ST1
++createEmpArray()
+
+}
+parseData--formatPrint
+parseData^-Person
+parseData--FindLongest
+interface formatPrint{
++Stringbuilder[]
++Person[]
++println()
+}
+
+class Person{
++String First,Last,Salary
++getFirst()
++getLast()
++getSalary()
+}
+interface FindLongest{
++int length,a,type
++Person[] Perarr
++Person Perarr[a]
++.getSalary()
++.length()
+}
+interface formatPrint{
++Stringbuilder[] s
++int countFirst,countLast,countSalary
++.append()
++.length()
++Person[] Perarr
+}
+createEmpArray--parseData
+stringSort--parseData
+interface createEmpArray{
++int i,i1
++Person[] employee
++createEmployee()
+}
+createEmployee-^createEmpArray
+interface createEmployee{
++StringBuilder last,first,salary
++String line
++int count,i
++length()
++charAt()
++isDigit()
++isAlphabetic()
++append()
+}
+interface stringSort{
++String[] st1
++String blemp //temporary
++int i1,i,j,k
++char x,y
++compareToIgnoreCase()
++charAt()
+}
+
+
+@enduml

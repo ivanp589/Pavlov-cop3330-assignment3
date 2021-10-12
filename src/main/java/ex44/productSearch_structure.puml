@@ -1,0 +1,96 @@
+@startuml
+class Product{
+-String name
+-double price
+-int quantity
+}
+
+Product--getName
+Product--getPrice
+Product--getQuantity
+interface getName{
++String
+}
+interface getPrice{
++double
+}
+interface getQuantity{
++int
+}
+
+class productSearch{
++Scanner in
++JsonObject
++openjson()
++HashMap<>
++createHAsh()
++String productName,outputString
++println()
++getName()
++output()
+}
+productSearch--productCapilization
+productSearch--getName
+productSearch--output
+interface productCapilization{
++char c
++char[] nameArr
++toCharArray()
++charAt()
++String productName
++String()
+}
+
+interface output{
++HashMap
+String productName
++get()
++getName()
++getPrice()
++getQuantity()
+}
+
+interface isProductInSystem{
++containsKey()
++String productName
++HashMap
+}
+getName<-productCapilization
+getName<-isProductInSystem
+
+interface getName{
++boolean productmap
++String productName
++print()
++nextline()
++productCapilization()
++isProductInSystem()
+}
+
+interface createHash{
++Gson
++HashMap productmap
++JsonArray products
++getAsJsonArray()
++int i
++Product product
++get()
++Product.getName()
++put()
+}
+productSearch--openjson
+productSearch--createHash
+
+interface openjson{
++JsonParser
++Object input
++parse()
++FileReader()
+
+
+}
+
+
+
+
+@enduml

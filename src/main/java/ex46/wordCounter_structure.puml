@@ -1,0 +1,74 @@
+@startuml
+
+
+wordCounter--createHashMap
+wordCounter--output
+wordCounter--getStringFromFile
+class wordCounter{
++String inputSTR,outputString
++println()
++createHashMap()
++HashMap frequencyHashMap
++output()
+}
+output<-getListOfKeys
+output<-getSpaces
+output<-getstars
+interface output{
++StringBuilder outputString
++int i
++ArrayList word
++getListOfKeys()
++get()
++append()
++getstars()
++getSpaces()
+}
+
+interface getListOfKeys{
++String[] inputSTR
++split()
++ArrayList listOfKeys
++int i
++length()
++contains()
++add()
+}
+
+interface getstars{
++Stringbuilder stars
++int numStars,i
++get()
++append()
+}
+
+interface getSpaces{
++Stringbuilder spaces
++int numSpaces,i
++append()
+}
+
+interface getStringFromFile{
++String originalString
++readAllBytes()
++get()
++printStackTrace()
+}
+
+interface createHashMap{
++HashMap frequencyMap
++split()
++length()
++int i
++String[] input
++containsKey()
++put()
++get()
++replace()
+
+}
+
+
+
+
+@enduml
